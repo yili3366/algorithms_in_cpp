@@ -70,13 +70,14 @@ int main(int argc, char *argv[])
         return ERRFALSE;
     }
 
-    if (!(atoi(argv[1]) > 0)) {
-        std::cout << "argv[1]  must great than zero " << std::endl;
+    if (!(atoi(argv[1]) >= 0)) {
+        std::cout << "argv[1]  must great or equal than zero " << std::endl;
         return ERRFALSE;
     }
 
-    if (!((atof(argv[2]) > 0.0) && (atof(argv[2]) < 1.0))) {
-        std::cout << "argv[2] must great than 0.0 and lower than 1.0" << std::endl;
+    if (!((atof(argv[2]) >= 0.0) && (atof(argv[2]) <= 1.0))) {
+        std::cout << "argv[2] must great or equal \
+                     than 0.0 and lower or equal than 1.0" << std::endl;
         return ERRFALSE;
     }
 
